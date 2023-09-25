@@ -1,0 +1,9 @@
+# .air.toml
+[build]
+  cmd = "go build -o /main ./cmd/server"
+  bin = "/main"
+
+[watch]
+  paths = ["."]
+  exts = ["go"]
+  delay = 500
