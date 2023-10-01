@@ -1,0 +1,6 @@
+---
+- name: Stop App
+  hosts: localhost
+  tasks:
+    - name: Stop container
+      command: docker compose down

@@ -1,0 +1,13 @@
+---
+- name: Start App
+  hosts: "{{ HOST }}"
+  vars_files:
+    - "../vars/{{ ENVIRONMENT }}.yml"
+  tasks:
+    - name: Install Docker
+      package:
+        name: docker
+        state: present
+
+    - name: Build and run container
+      command: docker compose up -d
